@@ -4,6 +4,7 @@ import { sendResponse } from '../utils/sendResponse.js'
 import { addNewSighting } from '../utils/addNewSighting.js'
 import { sanitizeInput } from '../utils/sanitizeInput.js'
 import { sightingEvents } from '../events/sightingEvents.js'
+import { stories } from '../data/stories.js'
 
 export async function handleGet(res) {
   const data = await getData()
@@ -22,4 +23,16 @@ export async function handlePost(req, res) {
     sendResponse(res, 400, 'application/json', JSON.stringify({error: err}))
   }
   
+}
+
+export async function handleNews(req, res) {
+  res.statusCode = 200
+  res.setHeader('Content-Type', 'text/event-stream')
+  res.setHeader('Cache-Control', 'no-cache')
+  res.setHeader('Connection', 'keep-alive')
+
+  setInterval(() => {
+    let randomIndex = Math.floor(Math.random() * stories.length)
+    res.write(`data: ${JSON.stringify({event: 'spooky-news', story: stories[randomIndex]})}\n\n`)
+  }, 3000)
 }
