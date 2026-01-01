@@ -21,6 +21,9 @@ from-the-other-side/
 ├── package.json
 └── server.js
 ```
+---
+## Dependencies
+- **sanitize-html** - 2.17.0
 
 ---
 ## Running 
