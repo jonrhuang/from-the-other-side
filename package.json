@@ -8,5 +8,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
+  },
+  "devDependencies": {
+    "@types/sanitize-html": "^2.16.0"
   }
 }
