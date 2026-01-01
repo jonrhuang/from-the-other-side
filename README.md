@@ -1,4 +1,5 @@
-# From The Other Side site 
+# From The Other Side site/server 
+Want to read unexplainable spooky stories or have your own to share? Read all about them on this site. Lets users read stories and upload their own. Uses Node.js to run server and handles requests. This project was made following Scrimba "Node.js" course
 
 ## Tech Stack
 - **Node.js**
