@@ -26,11 +26,15 @@ from-the-other-side/
 - **sanitize-html** - 2.17.0
 
 ---
-## Running 
+## Running & Building
 
 ### Prerequisites
 - Node.js
 - npm
+
+### Building Project
+From the project root, run
+`npm install`
 
 ## Running Server
 From the project root, run
