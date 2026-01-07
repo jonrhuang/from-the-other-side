@@ -442,9 +442,31 @@ textarea {
     max-width: 350px;
     min-height: 250px;
     padding: 1.4rem;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
     flex-direction: column;
+}
+
+.sighting-card::after {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    background: inherit;
+    filter: blur(20px);
+    opacity: 0.7;
+    animation: blurPulse 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes blurPulse {
+   0%, 100% {
+    filter: blur(20px);
+    opacity: 0.7; 
+   }
+   50% {
+    filter: blur(10px);
+    opacity: 0.5;
+   }
 }
 
 .sighting-card h3 {
